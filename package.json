@@ -1,0 +1,36 @@
+{
+  "name": "@ibqn/eslint-config",
+  "version": "0.0.1",
+  "description": "Shared common eslint config",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "engines": {
+    "node": ">=14",
+    "npm": ">=8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibqn/eslint-config.git"
+  },
+  "keywords": [
+    "eslint",
+    "config",
+    "configuration"
+  ],
+  "author": {
+    "name": "ibqn"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ibqn/eslint-config/issues"
+  },
+  "homepage": "https://github.com/ibqn/eslint-config#readme",
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "5.x",
+    "@typescript-eslint/parser": "5.x",
+    "eslint": "8.x",
+    "eslint-config-prettier": "8.x"
+  }
+}
