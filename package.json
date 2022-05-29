@@ -10,6 +10,10 @@
     "node": ">=14",
     "npm": ">=8"
   },
+  "scripts": {
+    "publish:snapshot": "npm run version:snapshot && npm publish --tag snapshot",
+    "version:snapshot": "npm version prerelease --preid snapshot --git-tag-version=false"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ibqn/eslint-config.git"
