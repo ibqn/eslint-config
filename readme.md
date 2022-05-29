@@ -1,5 +1,11 @@
 ## Shared common eslint config
 
+Install this package with:
+
+```shell
+pnpm install @ibqn/eslint-config
+```
+
 This package is published on `npmjs` and as well as on `github` registries.
 
 To be able to install this package from the `github` registry add the following line to your `~/.npmrc` file
@@ -8,7 +14,7 @@ To be able to install this package from the `github` registry add the following 
 @ibqn:registry=https://npm.pkg.github.com
 ```
 
-To include this eslint configuration add the following to your `package.json` file
+To include this eslint configuration add the following to your `package.json` file.
 
 ```json
 "eslintConfig": {
@@ -16,7 +22,7 @@ To include this eslint configuration add the following to your `package.json` fi
   },
 ```
 
-additionally add the following commands to your script
+Additionally, add the following linting commands to your script
 
 ```json
 "scripts": {
