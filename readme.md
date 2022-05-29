@@ -3,7 +3,7 @@
 Install this package with:
 
 ```shell
-pnpm install @ibqn/eslint-config
+pnpm add @ibqn/eslint-config
 ```
 
 This package is published on `npmjs` and as well as on `github` registries.

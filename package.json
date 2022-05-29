@@ -1,6 +1,6 @@
 {
   "name": "@ibqn/eslint-config",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Shared common eslint config",
   "main": "index.js",
   "files": [
