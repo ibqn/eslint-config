@@ -26,6 +26,11 @@ jobs:
           node-version: "16.x"
           registry-url: "https://npm.pkg.github.com"
 
+      - name: "Set git user.name and user.email"
+        run: |
+          git config user.name "github-actions"
+          git config user.email "ibqn@users.noreply.github.com"
+
       - name: "Publish"
         run: |
           if [[ "${{ github.event.inputs.releaseVersionType }}" != "major" \
