@@ -1,0 +1,39 @@
+name: "Publish package"
+
+on:
+  workflow_dispatch:
+    inputs:
+      releaseName:
+        description: "Release Name (e.g. `MyFeatures`)"
+        required: true
+
+      releaseVersionType:
+        description: "Version Type (`patch`, `minor`, `major`)"
+        required: true
+        default: "patch"
+
+jobs:
+  publish:
+    name: "Build and publish"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout code"
+        uses: "actions/checkout@v3"
+
+      - name: "Setup NodeJS Environment"
+        uses: "actions/setup-node@v3"
+        with:
+          node-version: "16.x"
+          registry-url: "https://npm.pkg.github.com"
+
+      - name: "Publish"
+        run: |
+          if [[ "${{ github.event.inputs.releaseVersionType }}" != "major" \
+          && "${{ github.event.inputs.releaseVersionType }}" != "minor" \
+          && "${{ github.event.inputs.releaseVersionType }}" != "patch" ]];
+          then
+            exit 1;
+          fi
+          VERSION=$(npm version ${{ github.event.inputs.releaseVersionType }})
+          git push
+          git push origin $VERSION
